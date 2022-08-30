@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music play</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<h1>Swakala player</h1>
+<div>
+<i onclick="lightMode()" class='bx bxs-virus'></i>
+<i onclick="darkMode()" class='bx bxs-virus-block'></i>
+<i onclick="play()" class='bx bx-play'></i>
+<i onclick="pause()" class='bx bx-pause'></i>
+</div>
+<h3>JLK</h3>
+<!-- controls -->
+<audio  id="music">
+    <source src="./assets/audio/grace.mp3" type="audio/mpeg">
+</audio>
+<script>
+    let music= document.getElementById("music");
+    function play() {
+        music.play();
+    }
+
+    function pause() {
+        music.pause();
+    }
+    function darkMode() {
+    let element = document.body;
+    let content = document.getElementById("DarkModetext");
+    element.className = "dark";
+}
+    function lightMode() {
+    let element = document.body;
+    let content = document.getElementById("DarkModetext");
+    element.className = "light";
+}
+</script>
+</body>
+</html>
